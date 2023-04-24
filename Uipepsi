@@ -1095,7 +1095,7 @@ do
 					Close.AnchorPoint = Vector2.new(1)
 					Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 					Close.BackgroundTransparency = 1
-					Close.Image = ""
+					Close.Image = "http://www.roblox.com/asset/?id=9064270627"
 					Close.ImageColor3 = library.colors.section
 					colored[1 + #colored] = {Close, "ImageColor3", "section"}
 					Close.Name = "Close"
@@ -6719,9 +6719,9 @@ function library:CreateWindow(options, ...)
 		}
 		local daaata = {{"AddTextbox", "__Designer.Textbox.ImageAssetID", backgroundsection, {
 			Name = "Image Asset ID",
-			Placeholder = "rbxassetid://",
+			Placeholder = "rbxassetid://5553946656",
 			Flag = "__Designer.Background.ImageAssetID",
-			Value = "rbxassetid://",
+			Value = "rbxassetid://5553946656",
 			Callback = updatecolorsnotween
 		}}, {"AddColorpicker", "__Designer.Colorpicker.ImageColor", backgroundsection, {
 			Name = "Image Color",
