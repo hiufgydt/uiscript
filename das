@@ -1,0 +1,93 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+
+local w = library:CreateWindow("Build Boat By Axis") -- Creates the window
+
+local b = w:CreateFolder("Leak") -- Creates the folder(U will put here your buttons,etc)
+
+
+task.spawn(function()
+	game:GetService("RunService").Stepped:Connect(function()
+		pcall(function()
+			if _G.AutoFarm1 or _G.AutoFarm then
+				if syn then
+					setfflag("HumanoidParallelRemoveNoPhysics", "False")
+					setfflag("HumanoidParallelRemoveNoPhysicsNoSimulate2", "False")
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+					if game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit == true then
+						game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
+					end
+				else
+					if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+						if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyVelocity1") then
+							if game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit == true then
+								game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = false
+							end
+							local BodyVelocity = Instance.new("BodyVelocity")
+							BodyVelocity.Name = "BodyVelocity1"
+							BodyVelocity.Parent =  game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+							BodyVelocity.MaxForce = Vector3.new(10000, 10000, 10000)
+							BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+						end
+					end
+					for _, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+						if v:IsA("BasePart") then
+							v.CanCollide = false    
+						end
+					end
+				end
+			else
+				if game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyVelocity1") then
+					game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyVelocity1"):Destroy();
+				end
+			end
+		end)
+	end)
+end)
+
+
+b:Toggle("Auto Fram Gold"",function(bool)
+    _G.AutoFarm1 = bool
+end)
+
+b:Toggle("Auto Fram Gold 2",function(boo1l)
+    _G.AutoFarm = boo1l
+end)
+
+--fast--
+spawn(function()
+    while wait() do
+    if _G.AutoFarm then
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-61.90040588378906, 29.681167602539062, 157.34344482421875)}):Play() 
+    wait(0.5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-60.5737877, 53.9498825, 8666.35059)}):Play()
+    wait(5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-55.5486526, -360.063782, 9489.0498)}):Play()
+    wait(16)
+       end
+    end
+end)
+--no fast--
+spawn(function()
+    while wait() do
+    if _G.AutoFarm1 then
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-61.90040588378906, 29.681167602539062, 157.34344482421875)}):Play() 
+    wait(0.5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(25, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-60.5737877, 53.9498825, 8666.35059)}):Play()
+    wait(25)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-55.5486526, -360.063782, 9489.0498)}):Play()
+    wait(16)
+       end
+    end
+end)
