@@ -41,11 +41,11 @@ task.spawn(function()
 	end)
 end)
 
-OwO:Toggle("Auto Fram Gold", true, function(bool)
+OwO:Toggle("Auto Fram Gold", false, function(bool)
     _G.AutoFarm1 = bool-- bool is true or false depending on the state of the toggle
 end)
 
-OwO:Toggle("Auto Fram Gold 2", true, function(boo1l)
+OwO:Toggle("Auto Fram Gold 2", false, function(boo1l)
     _G.AutoFarm = boo1l-- bool is true or false depending on the state of the toggle
 end)
 
