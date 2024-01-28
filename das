@@ -1,9 +1,6 @@
-local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/turtle"))()
 
-local w = library:CreateWindow("Build Boat By Axis") -- Creates the window
-
-local b = w:CreateFolder("Leak") -- Creates the folder(U will put here your buttons,etc)
-
+local OwO = library:Window("Build Boat By Axis")
 
 task.spawn(function()
 	game:GetService("RunService").Stepped:Connect(function()
@@ -44,13 +41,12 @@ task.spawn(function()
 	end)
 end)
 
-
-b:Toggle("Auto Fram Gold"",function(bool)
-    _G.AutoFarm1 = bool
+OwO:Toggle("Auto Fram Gold", false, function(bool)
+    _G.AutoFarm1 = bool-- bool is true or false depending on the state of the toggle
 end)
 
-b:Toggle("Auto Fram Gold 2",function(boo1l)
-    _G.AutoFarm = boo1l
+OwO:Toggle("Auto Fram Gold 2", false, function(boo1l)
+    _G.AutoFarm = boo1l-- bool is true or false depending on the state of the toggle
 end)
 
 --fast--
