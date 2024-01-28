@@ -1,0 +1,50 @@
+--Made by : UNKNOWN
+
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/polar"))()
+local ok = library:CreateWindow("Build Boat By Axis")
+ok:Section("Main")
+ok:Toggle("Auto Fram coin",function(a)
+    _G.AutoFarm1 = a
+end)
+
+ok:Toggle("Auto Fram coin (Fast)",function(b)
+    _G.AutoFarm = b
+end)
+--fast--
+spawn(function()
+    while wait() do
+    if _G.AutoFarm then
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-61.90040588378906, 29.681167602539062, 157.34344482421875)}):Play() 
+    wait(0.5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-60.5737877, 53.9498825, 8666.35059)}):Play()
+    wait(5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-55.5486526, -360.063782, 9489.0498)}):Play()
+    wait(16)
+       end
+    end
+end)
+--no fast--
+spawn(function()
+    while wait() do
+    if _G.AutoFarm1 then
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-61.90040588378906, 29.681167602539062, 157.34344482421875)}):Play() 
+    wait(0.5)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(25, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-60.5737877, 53.9498825, 8666.35059)}):Play()
+    wait(25)
+    local TweenService = game:GetService("TweenService")
+    local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+    {CFrame = CFrame.new(-55.5486526, -360.063782, 9489.0498)}):Play()
+    wait(16)
+       end
+    end
+end)
